@@ -13,7 +13,13 @@ connectDb();
 console.log("This is express");
 app.use(express.json());
 app.use(cors({origin:"*"}));
-
+app.use(cors(
+  {
+    origin:['https://deploy-mern-lwhq.vercel.app'],
+    methods:['POST','GET','PUT','DELETE'],
+    credentials:true
+  }
+));
 console.log('hi');
 app.use("/api/contacts", require("./routes/contactRoute"));
 app.use("/api/users", require("./routes/userRoutes"));
