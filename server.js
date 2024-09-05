@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 
   // If using nonce-based CSP:
   // const nonce = Buffer.from(Date.now().toString()).toString('base64');
-  // res.setHeader("Content-Security-Policy", `default-src 'self'; script-src 'self' 'nonce-${nonce}'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' http://localhost:5500;`);
+  // res. etHeader("Content-Security-Policy", `default-src 'self'; script-src 'self' 'nonce-${nonce}'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' http://localhost:5500;`);
   
   next();
 });
